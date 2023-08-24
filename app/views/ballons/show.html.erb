@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @ballon %>
+<h3><%=@ballon.title %></h3>
+<p><%=@ballon.desciption %></p>
+<p><%=@ballon.price %></p>
+<div>
+  <%= link_to "Edit this ballon", edit_ballon_path(@ballon) %> |
+  <%= link_to "Back to ballons", ballons_path %>
+
+  <%= button_to "Destroy this ballon", @ballon, method: :delete %>
+</div>

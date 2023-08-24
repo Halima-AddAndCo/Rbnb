@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Ballons</h1>
+
+<div id="ballons">
+  <% @ballons.each do |ballon| %>
+    <%= render ballon %>
+    <p>
+      <%= link_to "Show this ballon", ballon %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New ballon", new_ballon_path %>
+
+

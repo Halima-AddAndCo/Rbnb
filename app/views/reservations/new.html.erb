@@ -1,0 +1,15 @@
+<h1>New reservation</h1>
+
+<%= render "form", reservation: @reservation %>
+
+<br>
+
+<div>
+  <%= link_to "Back to reservations", reservations_path %>
+</div>
+<%= form_for @reservation do |f| %>
+  <%= f.hidden_field :ballon_id, value: @ballon.id %>
+  <%= f.label :start_date %> <%= f.date_field :start_date %>
+   <%= f.label :end_date %> <%= f.date_field :end_date %>
+   <%= f.submit "Réserver" %>
+  <% end %>
